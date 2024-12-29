@@ -69,7 +69,8 @@ trainer = Trainer(
 trainer.train()
 
 # Сохранение модели
-model.save_pretrained('./game_model')
-tokenizer.save_pretrained('./game_model')
+model_folder="game_model_2"
+model.save_pretrained(f'./{model_folder}')
+tokenizer.save_pretrained(f'./{model_folder}')
 
-print("Модель обучена и сохранена в 'game_model'")
+print(f"Модель обучена и сохранена в '{model_folder}'")
